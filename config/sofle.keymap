@@ -15,18 +15,37 @@
         compatible = "zmk,keymap";
 
         default_layer {
+        
+//*
+// * QWERTY
+// * ,-----------------------------------------.                    ,-----------------------------------------.
+// * |  `   |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
+// * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+// * | ESC  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | Bspc |
+//* |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+// * | Tab  |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+// * |------+------+------+------+------+------|Play,VOL|   |       |------+------+------+------+------+------|
+// * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
+// * `-----------------------------------------/       /     \      \-----------------------------------------'
+// *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+//*            |      |      |      |      |/       /         \      \ |      |      |      |      |
+// *            `----------------------------------'           '------''---------------------------'
+ //
+ 
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
 // | C/ESC |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
 // | TAB   |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |  '  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  PLAY  |  | NEXT  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | CAPS| ALT  | GUI/-| SPACE|LOWER/[ |  |RAISE/]| ENTER|  GUI/=|  ALT  | CTRL |
-            bindings = <
-&kp N5     &kp N4 &kp N3    &kp N2    &kp N1         &kp GRAVE                           &kp N6  &kp N7         &kp N8    &kp N9   &kp N0   &kp BSPC
-&kp T       &kp R  &kp E     &kp W     &kp Q          &kp ESC                            &kp Y   &kp U          &kp I     &kp O    &kp P    &kp BSLH
-&kp G &kp F  &kp D     &kp S     &kp A          &mt LCTRL TAB                            &kp H   &kp J          &kp K     &kp L    &kp SEMI &kp SQT
-&kp B     &kp V  &kp C     &kp X     &kp Z          &kp LSHFT     &kp C_PP  &kp C_NEXT   &kp N   &kp M          &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                     &lt 1 LBKT  &kp SPACE  &mt LGUI MINUS &kp LALT &kp CLCK   &lt 2 RBKT &kp RET &mt RGUI EQUAL &kp RALT  &kp RCTRL
+           
+           
+           bindings = <
+&kp N5    &kp N4 &kp N3    &kp N2    &kp N1         &kp GRAVE                            &kp N6   &kp N7         &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp T     &kp R  &kp E     &kp W     &kp Q          &kp ESC                              &kp Y     &kp U         &kp I     &kp O    &kp P    &kp BSLH
+&kp G     &kp F  &kp D     &kp S     &kp A          &mt LCTRL TAB                        &kp H    &kp J          &kp K     &kp L    &kp SEMI &kp SQT
+&kp B     &kp V  &kp C     &kp X     &kp Z          &kp LSHFT     &kp C_PP  &kp C_NEXT   &kp N   &kp M           &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+             &lt 1 LBKT  &kp SPACE  &mt LGUI MINUS &kp LALT &kp CLCK                     &lt 2 RBKT &kp RET &mt RGUI EQUAL &kp RALT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
